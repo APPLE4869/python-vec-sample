@@ -1,2 +1,11 @@
 # livedoor ニュースコーパスの解凍データ
 /text
+
+/model/*
+!/model/.keep
+
+/min_model/*
+
+.DS_Store
+
+amazon_reviews.json

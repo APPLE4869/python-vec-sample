@@ -5,9 +5,17 @@ import MeCab
 from gensim.models import word2vec
 import numpy as np
 
+data = word2vec.Text8Corpus("wiki_wakati.txt")
+model =  word2vec.Word2Vec(data, size=100)
+model.save("./wiki.model")
+
 mt = MeCab.Tagger('')
 mt.parse('')
 model = word2vec.Word2Vec.load("./wiki.model")
+
+
+
+
 
 # テキストのベクトルを計算
 def get_vector(text):
