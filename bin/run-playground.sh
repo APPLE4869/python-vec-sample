@@ -16,6 +16,9 @@ if [ ! -d "$THAWING_DIR" ]; then
   echo 'livedoor ニュースコーパスのデータを解凍しました！'
 fi
 
+# アマゾンレビューデータを解凍
+# 全部１つのファイルにするとサイズが大きすぎてgithubに置けないので分割して圧縮して保存している。
+# そのため、ここでは分割しているファイルをそれぞれ解凍した後に１つのファイルに統合している。
 GZIP_FILE='amazon_reviews.json'
 if [ ! -e "$GZIP_FILE" ]; then
   echo 'Amazonレビューのデータを解凍中...'

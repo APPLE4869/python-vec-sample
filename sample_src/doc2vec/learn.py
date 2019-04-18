@@ -27,11 +27,11 @@ tagger = MeCab.Tagger("-Owakati")
 print("文章読み込み中...")
 trainings = []
 for doc in tqdm(corpus):
-    f = open(doc)
-    for i, data in enumerate(f):
-        if i == 0 or i == 1: # URLと掲載時刻は除外
-            continue
-        trainings.append(TaggedDocument(words = tagger.parse(data).strip().split(), tags = [doc]))
+    with open(doc) as f:
+        for i, data in enumerate(f):
+            if i == 0 or i == 1: # URLと掲載時刻は除外
+                continue
+            trainings.append(TaggedDocument(words = tagger.parse(data).strip().split(), tags = [doc]))
 print("記事数 : " + str(len(corpus)))
 print("文章数 : " + str(len(trainings)))
 print("文章読み込み完了")
