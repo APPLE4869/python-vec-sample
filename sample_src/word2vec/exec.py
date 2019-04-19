@@ -33,11 +33,11 @@ for i in similar_words:
 
 # 尾張と類似している単語を見る
 most_similar_word = "信長"
-    similar_words = model.wv.most_similar(positive=[most_similar_word], topn=5)
-    print("\n「" + most_similar_word + "」に最も類似した単語トップ5")
-    for i in similar_words:
-        print(i[0])
-        print(i[1])
+similar_words = model.wv.most_similar(positive=[most_similar_word], topn=5)
+print("\n「" + most_similar_word + "」に最も類似した単語トップ5")
+for i in similar_words:
+    print(i[0])
+    print(i[1])
 
 
 # ２つの単語の類似度を計算。
