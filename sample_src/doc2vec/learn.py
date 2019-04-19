@@ -17,7 +17,7 @@ def corpus_files():
     return docs
 
 corpus = corpus_files()
-corpus = [path.join('text/livedoor-homme', x) for x in listdir('text/livedoor-homme') if x.endswith('.txt')]
+# corpus = [path.join('text/livedoor-homme', x) for x in listdir('text/livedoor-homme') if x.endswith('.txt')]
 
 tagger = MeCab.Tagger("-Owakati")
 

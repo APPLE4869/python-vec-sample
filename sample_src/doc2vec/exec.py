@@ -6,7 +6,6 @@ from gensim.models.doc2vec import Doc2Vec
 
 # 学習モデルの読み込み
 model = Doc2Vec.load('model/doc2vec.model')
-# model = Doc2Vec.load('min_model/jawiki.doc2vec.dmpv300d/jawiki.doc2vec.dmpv300d.model')
 
 #引数は文書id
 similar = model.docvecs.most_similar("text/livedoor-homme/livedoor-homme-4568088.txt")

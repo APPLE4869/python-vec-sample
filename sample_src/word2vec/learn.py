@@ -52,8 +52,8 @@ print('# 処理２ Word2Vec 学習 開始')
 
 corpus = [sentence.split() for sentence in corpus]
 
-print(len(corpus))
-print(corpus[0])
+# print(len(corpus))
+# print(corpus[0])
 #モデルを作る
 model = word2vec.Word2Vec(corpus, size=200, min_count=20, window=10)
 

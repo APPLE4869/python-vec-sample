@@ -12,7 +12,6 @@ print('# 処理３ Word2Vec 学習モデルを利用 開始')
 
 # モデルを読み込む
 model = word2vec.Word2Vec.load("./model/pwiki.model")
-# model = KeyedVectors.load_word2vec_format("./min_model/entity_vector/entity_vector.model.txt")
 
 
 # 単語のベクトルを見る
@@ -46,8 +45,11 @@ similarity_2 = model.wv.similarity(w1="将軍", w2="リンゴ")
 similarity_3 = model.wv.similarity(w1="将軍", w2="信長")
 
 print("\nsimilarity")
+print("りんごと梨の関連度")
 print(similarity_1)
+print("\n将軍とりんごの関連度")
 print(similarity_2)
+print("\n将軍と信長の関連度")
 print(similarity_3)
 
 print('# 処理３ Word2Vec 学習モデルを利用 終了')
